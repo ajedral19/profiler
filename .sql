@@ -1,0 +1,27 @@
+CREATE DATABASE profiler;
+
+USE profiler;
+
+CREATE TABLE users id VARCHAR(50) NOT NULL PRIMARY KEY,
+firstname VARCHAR(50) NOT NULL,
+lastname VARCHAR(50) NOT NULL,
+username VARCHAR(50) UNIQUE NOT NULL,
+email VARCHAR(100) UNIQUE NOT NULL,
+pword VARCHAR(50) NOT NULL,
+create_at NOW();
+
+CREATE TABLE job id INT PRIMARY KEY NOT NULL AUTO INCREMENT,
+jobtitle VARCHAR(50) NOT NULL,
+jobposition VARCHAR(50),
+extras JSON,
+jobdescription TEXT,
+create_at NOW(),
+u_id VARCHAR(50) REFERENCES users(id);
+
+CREATE TABLE project id INT PRIMARY KEY NOT NULL AUTO INCREMENT,
+title VARCHAR(50) NOT NULL,
+subject VARCHAR(50),
+extras JSON,
+projdescription TEXT,
+create_at NOW(),
+u_id VARCHAR(50) REFERENCES users(id);

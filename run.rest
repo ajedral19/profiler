@@ -1,0 +1,47 @@
+POST http://localhost/profiler/register
+Content-Type: application/json
+
+{
+    "firstname": "Jannett",
+    "lastname": "Walterson",
+    "email": "w.jannett86@gmail.com",
+    "username": "theWaleteson_J",
+    "password": "78958",
+    "repassword": "78958"
+}
+###
+
+POST http://localhost/profiler/login
+Content-Type: application/json
+
+{
+    "username": "doeNutEat",
+    "password": "1234"
+}
+###
+
+
+DELETE http://localhost/profiler/delete
+Content-Type: application/json
+
+{
+    "id": "_158715661715871",
+    "username": "ironMan3000"
+}
+###
+
+PATCH http://localhost/profiler/?user=janeDoenut/update
+Content-Type: application/json
+
+{
+    "id": "USERILWZ1802539909",
+    "firstname": "Jane",
+    "lastname": "Doe",
+    "email": "jane.d@gmail.com",
+    "username": "janeDoenut",
+}
+###
+
+GET https://e22c.gmanetwork.com/n/PRESIDENT_PHILIPPINES.json
+origin: https://www.gmanetwork.com
+referer: referer: https://www.gmanetwork.com/
